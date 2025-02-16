@@ -1,6 +1,5 @@
 "use strict";
 // ********************Task : 01*********************
-Object.defineProperty(exports, "__esModule", { value: true });
 function createUser(user) {
     return user;
 }
@@ -22,9 +21,6 @@ const processInput = (input) => {
 };
 // ********************Task : 03*********************
 class Vehicle {
-    make;
-    model;
-    year;
     constructor(make, model, year) {
         this.make = make;
         this.model = model;
@@ -35,7 +31,6 @@ class Vehicle {
     }
 }
 class Car extends Vehicle {
-    doors;
     constructor(make, model, year, doors) {
         super(make, model, year);
         this.doors = doors;
@@ -45,7 +40,6 @@ class Car extends Vehicle {
     }
 }
 class MotorCycle extends Vehicle {
-    hasSidecar;
     constructor(make, model, year, hasSidecar) {
         super(make, model, year);
         this.hasSidecar = hasSidecar;
@@ -60,9 +54,8 @@ const motorcycle = new MotorCycle("Alto", "660cc", 2019, false);
 console.log(motorcycle.getInfo());
 // ********************Task : 04*********************
 class bankAccount {
-    isbalance = 0;
-    isAccountNumber;
     constructor(accountNumber, Balance) {
+        this.isbalance = 0;
         this.isAccountNumber = accountNumber;
         this.isbalance = Balance;
     }
@@ -94,7 +87,6 @@ Account.withdraw(500);
 console.log('Thanks You M Moeed!');
 // ********************Task : 05*********************
 class Shape {
-    color;
     constructor(color) {
         this.color = color;
     }
@@ -103,7 +95,6 @@ class Shape {
     }
 }
 class Circle extends Shape {
-    radius;
     constructor(color, radius) {
         super(color);
         this.radius = radius;
@@ -113,8 +104,6 @@ class Circle extends Shape {
     }
 }
 class Rectangle extends Shape {
-    width;
-    height;
     constructor(color, width, height) {
         super(color);
         this.width = width;

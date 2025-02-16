@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Assignment 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #3b5998);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            box-shadow: inset 0px -4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .task-list li:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .checkmark {
+            color: #00ff88;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TypeScript Assignment 1</h1>
+        <p>Completed by: <strong>M Moeed Qadri</strong></p>
+        <p>Below are the tasks I have completed:</p>
+
+        <ul class="task-list">
+            <li><span class="checkmark">🚀</span> Task 1</li>
+            <li><span class="checkmark">✨</span> Task 3</li>
+            <li><span class="checkmark">🔥</span> Task 4</li>
+            <li><span class="checkmark">🏆</span> Task 5</li>
+        </ul>
+    </div>
+
+    <script src="./dist/app.js"></script>
+</body>
+
+</html>
