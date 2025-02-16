@@ -59,7 +59,6 @@ class Car extends Vehicle{
     getInfo(): string {
         return `${super.getInfo()} ${this.doors} `; 
       }
-
 }
 class MotorCycle extends Vehicle{
     hasSidecar : boolean;
