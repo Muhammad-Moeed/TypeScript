@@ -277,6 +277,7 @@ console.log(`\n`)
 // console.log(student1.school) # Error
 
 // ********************Task : 09*********************
+
 type Response = {
     success: true
     data: string
@@ -293,16 +294,52 @@ function handleResponse(response: Response) {
     }
 }
 
-const successResponse: Response = {
+const success: Response = {
     success: true,
     data: "Agaya Apun hurrah!"
 }
-const errorResponse: Response = {
+const error: Response = {
     success: false,
     error: "Nhi Aya"
 }
 
 console.log(`Task # 9 Output \n`)
-handleResponse(successResponse)
-handleResponse(errorResponse)
+handleResponse(success)
+handleResponse(error)
+console.log(`\n`)
+
+// ********************Task : 10*********************
+
+abstract class Animal {
+    protected species: string
+
+    constructor(species: string) {
+        this.species = species
+    }
+
+    abstract makeSound(): string
+    getSpecies(): string {
+        return this.species
+    }
+}
+
+class Dog extends Animal {
+    makeSound(): string {
+        return "Woof!"
+    }
+}
+class Cat extends Animal {
+    makeSound(): string {
+        return "Meow!"
+    }
+}
+
+console.log(`Task # 10 Output \n`)
+const dog = new Dog("Percian Dog")
+const cat = new Cat("Percian Cat")
+
+console.log(dog.getSpecies())
+console.log(dog.makeSound())
+console.log(cat.getSpecies())
+console.log(cat.makeSound())
 console.log(`\n`)

@@ -216,16 +216,43 @@ function handleResponse(response) {
         console.log(`Error occurred: ${response.error}`);
     }
 }
-const successResponse = {
+const success = {
     success: true,
     data: "Agaya Apun hurrah!"
 };
-const errorResponse = {
+const error = {
     success: false,
     error: "Nhi Aya"
 };
 console.log(`Task # 9 Output \n`);
-handleResponse(successResponse);
-handleResponse(errorResponse);
+handleResponse(success);
+handleResponse(error);
+console.log(`\n`);
+// ********************Task : 10*********************
+class Animal {
+    constructor(species) {
+        this.species = species;
+    }
+    getSpecies() {
+        return this.species;
+    }
+}
+class Dog extends Animal {
+    makeSound() {
+        return "Woof!";
+    }
+}
+class Cat extends Animal {
+    makeSound() {
+        return "Meow!";
+    }
+}
+console.log(`Task # 10 Output \n`);
+const dog = new Dog("Percian Dog");
+const cat = new Cat("Percian Cat");
+console.log(dog.getSpecies());
+console.log(dog.makeSound());
+console.log(cat.getSpecies());
+console.log(cat.makeSound());
 console.log(`\n`);
 //# sourceMappingURL=app.js.map
