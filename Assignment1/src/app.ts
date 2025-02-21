@@ -447,10 +447,10 @@ interface GeometricShape {
 }
 
 class CircleShape implements GeometricShape {
-    private radius: number;
+    private radius: number
 
     constructor(radius: number) {
-        this.radius = radius;
+        this.radius = radius
     }
 
     calculateArea = (): number => {
@@ -458,7 +458,7 @@ class CircleShape implements GeometricShape {
     }
 
     getType = (): string => {
-        return "Circle";
+        return "Circle"
     }
 }
 
