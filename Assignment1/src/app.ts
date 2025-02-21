@@ -278,7 +278,7 @@ console.log(`\n`)
 
 // ********************Task : 09*********************
 
-type Response = {
+type APIResponse = {
     success: true
     data: string
 } | {
@@ -286,7 +286,7 @@ type Response = {
     error: string
 }
 
-function handleResponse(response: Response) {
+function handleResponse(response: APIResponse) {
     if ("data" in response) {
         console.log(`Data received: ${response.data}`)
     } else {
@@ -294,13 +294,13 @@ function handleResponse(response: Response) {
     }
 }
 
-const success: Response = {
+const success: APIResponse = {
     success: true,
-    data: "Agaya Apun hurrah!"
+    data: "Data Successfully!"
 }
-const error: Response = {
+const error: APIResponse = {
     success: false,
-    error: "Nhi Aya"
+    error: "Data Not Found!"
 }
 
 console.log(`Task # 9 Output \n`)
