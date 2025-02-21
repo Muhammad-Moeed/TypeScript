@@ -255,4 +255,75 @@ console.log(dog.makeSound());
 console.log(cat.getSpecies());
 console.log(cat.makeSound());
 console.log(`\n`);
+// ********************Task : 11*********************
+let findIndex = (arr, value) => {
+    return arr.indexOf(value);
+};
+console.log(`Task # 11 Output \n`);
+console.log(`Numbers Array index is ${findIndex([5, 4, 6, 3], 30)}`);
+console.log(`String Array index is ${findIndex(["apple", "banana", "cherry"], "banana")}`);
+console.log(`\n`);
+function useVehicle(vehicle) {
+    if ("drive" in vehicle) {
+        console.log(vehicle.drive());
+    }
+    else {
+        console.log(vehicle.ride());
+    }
+}
+const myCar = {
+    drive: () => "Driving a car!",
+};
+const myBike = {
+    ride: () => "Riding a bike!",
+};
+console.log(`Task # 12 Output \n`);
+useVehicle(myCar);
+useVehicle(myBike);
+console.log(`\n`);
+const describeEmployee = (emp) => {
+    return `Name: ${emp.name}\nAge: ${emp.age}\nJobTitle: ${emp.jobTitle}`;
+};
+const FullTimeEmployee = {
+    name: "M Moeed",
+    age: 17,
+    jobTitle: "Frontend Developer"
+};
+console.log(`Task # 13 Output \n`);
+console.log(describeEmployee(FullTimeEmployee));
+console.log(`\n`);
+const makeSound = (pet) => {
+    if ("bark" in pet) {
+        console.log(pet.bark());
+    }
+    else {
+        console.log(pet.meow());
+    }
+};
+const dogPet = {
+    bark: () => "Woof!"
+};
+const catPet = {
+    meow: () => "Meow!"
+};
+console.log(`Task # 14 Output \n`);
+makeSound(dogPet);
+makeSound(catPet);
+console.log(`\n`);
+class CircleShape {
+    constructor(radius) {
+        this.calculateArea = () => {
+            return 3.1416 * this.radius ** 2;
+        };
+        this.getType = () => {
+            return "Circle";
+        };
+        this.radius = radius;
+    }
+}
+console.log(`Task # 15 Output \n`);
+let GeometricCircle = new CircleShape(5);
+console.log(`Area: ${GeometricCircle.calculateArea()}`);
+console.log(GeometricCircle.getType());
+console.log(`\n`);
 //# sourceMappingURL=app.js.map

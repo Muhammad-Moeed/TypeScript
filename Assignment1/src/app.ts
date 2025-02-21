@@ -343,3 +343,127 @@ console.log(dog.makeSound())
 console.log(cat.getSpecies())
 console.log(cat.makeSound())
 console.log(`\n`)
+
+// ********************Task : 11*********************
+
+let findIndex = <diffTypes>(arr: diffTypes[], value: diffTypes): number => {
+    return arr.indexOf(value)
+}
+
+console.log(`Task # 11 Output \n`)
+console.log(`Numbers Array index is ${findIndex<number>([5, 4, 6, 3], 30)}`)
+console.log(`String Array index is ${findIndex<string>(["apple", "banana", "cherry"], "banana")}`)
+console.log(`\n`)
+
+// ********************Task : 12*********************
+
+interface car {
+    drive: () => string
+}
+interface Bike {
+    ride: () => string
+}
+
+function useVehicle(vehicle: car | Bike): void {
+    if ("drive" in vehicle) {
+        console.log(vehicle.drive())
+    } else {
+        console.log(vehicle.ride())
+    }
+}
+
+const myCar: car = {
+    drive: () => "Driving a car!",
+}
+const myBike: Bike = {
+    ride: () => "Riding a bike!",
+}
+
+console.log(`Task # 12 Output \n`)
+useVehicle(myCar)
+useVehicle(myBike)
+console.log(`\n`)
+
+// ********************Task : 13*********************
+
+interface Person {
+    name: string
+    age: number
+}
+interface Employe {
+    jobTitle: string
+}
+type FullTimeEmployee = Person & Employe
+
+const describeEmployee = (emp: FullTimeEmployee) => {
+    return `Name: ${emp.name}\nAge: ${emp.age}\nJobTitle: ${emp.jobTitle}`
+}
+
+const FullTimeEmployee: FullTimeEmployee = {
+    name: "M Moeed",
+    age: 17,
+    jobTitle: "Frontend Developer"
+}
+
+console.log(`Task # 13 Output \n`)
+console.log(describeEmployee(FullTimeEmployee))
+console.log(`\n`)
+
+// ********************Task : 14*********************
+
+interface DogPet {
+    bark: () => string
+}
+interface CatPet {
+    meow: () => string
+}
+type Pet = DogPet | CatPet
+
+const makeSound = (pet: Pet): void => {
+    if ("bark" in pet) {
+        console.log(pet.bark())
+    } else {
+        console.log(pet.meow())
+    }
+}
+
+const dogPet: DogPet = {
+    bark: () => "Woof!"
+}
+const catPet: CatPet = {
+    meow: () => "Meow!"
+}
+
+console.log(`Task # 14 Output \n`)
+makeSound(dogPet)
+makeSound(catPet)
+console.log(`\n`)
+
+// ********************Task : 15*********************
+
+interface GeometricShape {
+    calculateArea: () => number
+    getType: () => string
+}
+
+class CircleShape implements GeometricShape {
+    private radius: number;
+
+    constructor(radius: number) {
+        this.radius = radius;
+    }
+
+    calculateArea = (): number => {
+        return 3.1416 * this.radius **2  
+    }
+
+    getType = (): string => {
+        return "Circle";
+    }
+}
+
+console.log(`Task # 15 Output \n`)
+let GeometricCircle = new CircleShape(5)
+console.log(`Area: ${GeometricCircle.calculateArea()}`)
+console.log(GeometricCircle.getType())
+console.log(`\n`)
