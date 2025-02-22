@@ -215,7 +215,8 @@ class Developer extends Employee {
         this.programmingLanguage = programmingLanguage
     }
     getDetails() {
-        return `Developer: ${this.name}, Salary: ${this.salary}, Programming Language: ${this.programmingLanguage}`
+        return `Developer: ${this.name}, Salary: ${this.salary},
+         Programming Language: ${this.programmingLanguage}`
     }
 }
 
@@ -261,7 +262,8 @@ class Student {
     }
 
     getStudent() {
-        return `Name : ${this.name} Grades: ${this.grades} School: ${this.school} StudentId: ${this.studentID}`
+        return `Name : ${this.name} Grades: ${this.grades} 
+        School: ${this.school} StudentId: ${this.studentID}`
     }
 }
 
@@ -351,8 +353,10 @@ let findIndex = <diffTypes>(arr: diffTypes[], value: diffTypes): number => {
 }
 
 console.log(`Task # 11 Output \n`)
-console.log(`Numbers Array index is ${findIndex<number>([5, 4, 6, 3], 30)}`)
-console.log(`String Array index is ${findIndex<string>(["apple", "banana", "cherry"], "banana")}`)
+console.log(`Numbers Array index is 
+    ${findIndex<number>([5, 4, 6, 3], 30)}`)
+console.log(`String Array index is 
+    ${findIndex<string>(["apple", "banana", "cherry"], "banana")}`)
 console.log(`\n`)
 
 // ********************Task : 12*********************
@@ -454,7 +458,7 @@ class CircleShape implements GeometricShape {
     }
 
     calculateArea = (): number => {
-        return 3.1416 * this.radius **2  
+        return 3.1416 * this.radius ** 2
     }
 
     getType = (): string => {
